@@ -1,30 +1,26 @@
-# Say Me Something
-A text to speak library with embedded cache system.
+# Ask Me Something
+A speak to text library with embedded cache system.
 # Install
 ```
-pip3 install say-me-something
+pip3 install ask-me-something
 ```
 # Using
+The ask function prints and returns the recognized content
 ## In another script
 ```python
-from say_me_something import say
+from ask_me_something import ask
 
-# say(text = None, language = "en", no_cache = False, reset = False, no_speak = False)
+# ask(text = "Say something to mic", language = "en-en")
 
-say("Hello")
+ask()
 ```
 ## In command line
 ```console
   -h, --help            show this help message and exit
-  -t TEXT [TEXT ...], --text TEXT [TEXT ...]
-                        Text
   -l LANGUAGE, --language LANGUAGE
                         Language
-  -nc, --nocache        No cache
-  -r, --reset           Reset (removing the caches)
-  -ns, --nospeak        No speak
 ```
 
 ```console
-say -t Hello
+ask
 ```
