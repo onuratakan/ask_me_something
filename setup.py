@@ -3,10 +3,10 @@ from setuptools import setup
 
 setup(name='ask_me_something',
 version='0.1.0',
-description="""A speak to text library with embedded cache system.""",
+description="""A speak to text library.""",
 long_description="""
 # Ask Me Something
-A speak to text library with embedded cache system.
+A speak to text library.
 # Install
 ```
 pip3 install ask-me-something

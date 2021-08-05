@@ -1,5 +1,5 @@
 # Ask Me Something
-A speak to text library with embedded cache system.
+A speak to text library.
 # Install
 ```
 pip3 install ask-me-something
