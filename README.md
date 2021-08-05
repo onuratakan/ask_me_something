@@ -1,5 +1,5 @@
 # Ask Me Something
-A speak to text library.
+A speech to text library.
 # Install
 ```
 pip3 install ask-me-something

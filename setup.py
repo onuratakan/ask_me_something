@@ -2,11 +2,11 @@ from setuptools import setup
 
 
 setup(name='ask_me_something',
-version='0.1.0',
-description="""A speak to text library.""",
+version='0.1.1',
+description="""A speech to text library.""",
 long_description="""
 # Ask Me Something
-A speak to text library.
+A speech to text library.
 # Install
 ```
 pip3 install ask-me-something
