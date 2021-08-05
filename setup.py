@@ -1,27 +1,24 @@
 from setuptools import setup
 
-from setuptools import setup
 
-
-
-setup(name='say_me_something',
+setup(name='ask_me_something',
 version='0.1.1',
-description="""A text to speak library with embedded cache system.""",
+description="""A speak to text library with embedded cache system.""",
 long_description="""
-# Say Me Something
-A text to speak library with embedded cache system.
+# Ask Me Something
+A speak to text library with embedded cache system.
 # Install
 ```
-pip3 install say-me-something
+pip3 install ask-me-something
 ```
 # Using
 ## In another script
 ```python
-from say_me_something import say
+from ask_me_something import ask
 
-# say(text = None, language = "en", no_cache = False, reset = False, no_speak = False)
+# ask(text = "Say something to mic", language = "en-en")
 
-say("Hello")
+print(ask())
 ```
 ## In command line
 ```console
@@ -40,23 +37,17 @@ say -t Hello
 ```
 """,
 long_description_content_type='text/markdown',
-url='https://github.com/onuratakan/say_me_something',
+url='https://github.com/onuratakan/ask_me_something',
 author='Onur Atakan ULUSOY',
 author_email='atadogan06@gmail.com',
 license='MIT',
-packages=["say_me_something"],
+packages=["ask_me_something"],
 package_dir={'':'src'},
-package_data={
-    "say_me_something" : ["cache/*.mp3"],
-},
 install_requires=[
-    "click==8.0.1",
-    "gTTS==2.2.3",
-    "playsound==1.3.0",
-    "pyttsx3==2.90",
+    "SpeechRecognition==3.8.1",
 ],
 entry_points = {
-    'console_scripts': ['say=say_me_something.say_me_something:say'],
+    'console_scripts': ['ask=ask_me_something.ask_me_something:ask'],
 },
-python_requires='>=3',
+python_requires=">= 3, <= 3.6",
 zip_safe=False)
