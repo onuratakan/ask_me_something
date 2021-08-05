@@ -49,5 +49,5 @@ install_requires=[
 entry_points = {
     'console_scripts': ['ask=ask_me_something.ask_me_something:ask'],
 },
-python_requires=">= 3, <= 3.6",
+python_requires=">= 3, < 3.7",
 zip_safe=False)
