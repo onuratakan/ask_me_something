@@ -22,6 +22,7 @@ def ask(text = "Say something to mic", language = "en-en"):
     try:
          data = r.recognize_google(audio, language=language)
          data = data.lower()
+         print(data)
          return data
 
     except sr.UnknownValueError:

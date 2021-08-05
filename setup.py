@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 setup(name='ask_me_something',
-version='0.1.1',
+version='0.1.0',
 description="""A speak to text library with embedded cache system.""",
 long_description="""
 # Ask Me Something
@@ -45,6 +45,7 @@ packages=["ask_me_something"],
 package_dir={'':'src'},
 install_requires=[
     "SpeechRecognition==3.8.1",
+    "PyAudio==0.2.11",
 ],
 entry_points = {
     'console_scripts': ['ask=ask_me_something.ask_me_something:ask'],
