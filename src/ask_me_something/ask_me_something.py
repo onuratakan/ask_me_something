@@ -30,4 +30,4 @@ def ask(text = "Say something to mic", language = "en-en"):
 
     except sr.UnknownValueError:
         print("I can't understand")
-        return None
+        return ""
