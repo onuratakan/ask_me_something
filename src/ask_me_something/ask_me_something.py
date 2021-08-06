@@ -1,7 +1,10 @@
 import speech_recognition as sr
 import argparse
 
-
+r = sr.Recognizer()
+m = sr.Microphone()
+print("A moment of silence, please...")
+with m as source: r.adjust_for_ambient_noise(source)
 
 def ask(text = "Say something to mic", language = "en-en"):
 
@@ -15,10 +18,10 @@ def ask(text = "Say something to mic", language = "en-en"):
     if not args.language is None:
         language = args.language
 
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-         print(text)
-         audio = r.listen(source)
+    global r
+    global m
+    print(text)
+    with m as source: audio = r.listen(source)
     try:
          data = r.recognize_google(audio, language=language)
          data = data.lower()

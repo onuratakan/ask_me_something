@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 setup(name='ask_me_something',
-version='0.1.1',
+version='0.1.2',
 description="""A speech to text library.""",
 long_description="""
 # Ask Me Something
