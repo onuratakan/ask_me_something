@@ -8,16 +8,6 @@ with m as source: r.adjust_for_ambient_noise(source)
 
 def ask(text = "Say something to mic", language = "en-en"):
 
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-l', '--language', type=str, help='Language')
-
-
-    args = parser.parse_args()
-
-    if not args.language is None:
-        language = args.language
-
     global r
     global m
     print(text)
@@ -31,3 +21,18 @@ def ask(text = "Say something to mic", language = "en-en"):
     except sr.UnknownValueError:
         print("I can't understand")
         return ""
+
+def arguments():
+    language = "en-en"
+
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-l', '--language', type=str, help='Language')
+
+
+    args = parser.parse_args()
+
+    if not args.language is None:
+        language = args.language
+
+    ask(language=language)

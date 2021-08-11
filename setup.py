@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 setup(name='ask_me_something',
-version='0.1.3',
+version='0.1.4',
 description="""A speech to text library.""",
 long_description="""
 # Ask Me Something
@@ -44,7 +44,7 @@ install_requires=[
     "PyAudio==0.2.11",
 ],
 entry_points = {
-    'console_scripts': ['ask=ask_me_something.ask_me_something:ask'],
+    'console_scripts': ['ask=ask_me_something.ask_me_something:arguments'],
 },
 python_requires=">= 3, < 3.7",
 zip_safe=False)
